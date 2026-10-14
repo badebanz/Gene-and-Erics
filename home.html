@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Gene & Eric's</title>
+<link rel="icon" type="image/x-icon" href="Gene&Erics.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stylesheet.css">
+<body>
+<div id="header">
+<a href="home.html"><h1>Gene & Eric's Recipe Sharing Website</h1></a>
+<div class="topnav">
+  <a class="active" href="home.html">Home</a>
+  <a href="about_us.html">About Us</a>
+  <a href="search.html">Search</a> 
+  <a href="sign_up.html">Sign Up</a>
+</div>
+</div>
+<h1>Latest Recipes</h1>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <a href="pumpkin-pie.html">Pumpkin Pie</a>
+    <a href="pumpkin-pie.html"><img src="pumpkin-pie.jpg" alt="Pumpkin Pie" style="height:600px;"></a>
+  </div>
+
+  <div class="mySlides1">
+    <a href="brownie.html">Brownie</a>
+    <a href="brownie.html"><img src="brownie.jpg" alt="Brownie" style="height:600px;"></a>
+  </div>
+
+  <div class="mySlides1">
+    <a href="apple-pie.html">Apple Pie</a>
+    <a href="apple-pie.html"><img src="apple-pie.jpg" alt="Apple Pie" style="height:600px;"></a>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<h1>Classics</h1>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <a href="chocolate_chip_cookies.html">Chocolate Chip Cookies</a>
+    <a href="chocolate_chip_cookies.html"><img src="Cookie.jpg" alt="Cookie" style="height:600px;"></a>
+  </div>
+
+  <div class="mySlides2">
+    <a href="bananbread.html">Banana Bread</a>
+    <a href="bananbread.html"><img src="bananbread.jpg" alt="Banana Bread" style="height:600px;"></a>
+  </div>
+
+  <div class="mySlides2">
+    <a href="chocolatecake.html">Chocolate Cake</a>
+    <a href="chocolatecake.html"><img src="choclatecake.jpg" alt="Chocolate Cake" style="height:600px; "></a>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+<script>
+let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+<footer>
+<p>Email: ericandgenes@gmail.com</p>
+<p>Mobile: +44123456789</p>
+</footer>
+</body>
+</html>

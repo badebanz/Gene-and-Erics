@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Gene & Eric's</title>
+<link rel="icon" type="image/x-icon" href="Gene&Erics.ico">
+<link rel="stylesheet" href="stylesheet.css">
+<body>
+<div id="header">
+<a href="home.html"><h1>Gene & Eric's Recipe Sharing Website</h1></a>
+<div class="topnav">
+  <a href="home.html">Home</a>
+  <a href="about_us.html">About Us</a>
+  <a class="active" href="search.html">Search</a> 
+  <a href="sign_up.html">Sign Up</a>
+</div>
+</div>
+<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+<ul id="myMenu">
+  <li><a href="apple-pie.html">Apple Pie</a></li>
+  <li><a href="bananbread.html">Banana Bread</a></li>
+  <li><a href="brownie.html">Brownie</a></li>
+  <li><a href="chocolatecake.html">Chocolate Cake</a></li>
+  <li><a href="chocolate_chip_cookies.html">Chocolate Chip Cookies</a></li>
+  <li><a href="pumpkin-pie.html">Pumpkin Pie</a></li>
+</ul>
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+<footer>
+<p>Email: ericandgenes@gmail.com</p>
+<p>Mobile: +44123456789</p>
+</footer>
+</body>
+</html>
